@@ -2,12 +2,13 @@ import React from "react";
 import { Button } from "antd";
 import "./App.less";
 import { Layout, Menu, Breadcrumb } from "antd";
+import { PositionCarouselDemo } from "./components/PositionCarouselDemo";
 
 const { Header, Content, Footer } = Layout;
 const App = () => (
   <div className="App">
     {/* <Button type="primary">Button</Button> */}
-    <Layout className="layout">
+    <Layout className="layout" style={{ height: "100%" }}>
       <Header>
         <div className="logo" />
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
@@ -17,13 +18,8 @@ const App = () => (
           })}
         </Menu>
       </Header>
-      <Content style={{ padding: "0 50px" }}>
-        <Breadcrumb style={{ margin: "16px 0" }}>
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
-          <Breadcrumb.Item>List</Breadcrumb.Item>
-          <Breadcrumb.Item>App</Breadcrumb.Item>
-        </Breadcrumb>
-        <div className="site-layout-content">Content</div>
+      <Content style={{ padding: "50px" }}>
+        <PositionCarouselDemo style={{ margin: "30px 0" }} />
       </Content>
       <Footer style={{ textAlign: "center" }}>
         Ant Design ©2018 Created by Ant UED
